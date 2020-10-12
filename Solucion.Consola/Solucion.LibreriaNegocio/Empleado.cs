@@ -56,7 +56,7 @@ namespace Solucion.LibreriaNegocio
         }
         public override string GetCredencial()
         {
-            throw new NotImplementedException();
+            return string.Format("{0} - {1} Salario $ {2}", this._legajo, this.GetNombreCompleto(), this.UltimoSalario);
         }
         public override string GetNombreCompleto()
         {
@@ -64,7 +64,7 @@ namespace Solucion.LibreriaNegocio
         }
         public override string ToString()
         {
-            return base.ToString();
+            return GetCredencial();
         }
         public void AgregarSalario(Salario salario)
         {

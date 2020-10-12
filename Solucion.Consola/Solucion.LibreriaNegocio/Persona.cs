@@ -46,7 +46,7 @@ namespace Solucion.LibreriaNegocio
 
         public virtual string GetNombreCompleto()
         {
-            return string.Format("{0}, {1}", this._apellido, this._nombre);
+            return string.Format("{0}, {1}", this._apellido.ToUpper(), this._nombre.ToUpper());
         }
 
 

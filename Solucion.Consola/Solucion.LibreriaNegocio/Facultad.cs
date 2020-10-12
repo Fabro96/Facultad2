@@ -44,19 +44,40 @@ namespace Solucion.LibreriaNegocio
         {
             get { return _alumnos; }
         }
+        public bool TieneAlumnos
+        {
+            get { return _alumnos.Count > 0; }
+        }
 
         //MÉTODOS
-        public void AgregarAlumno(Alumno alumno)
+        public void AgregarAlumno(int codigo, string nombre, string apellido, DateTime nacimiento)
         {
-            throw new NotImplementedException();
+            Alumno alumno = new Alumno(codigo, nombre, apellido, nacimiento);
+
+            foreach(Alumno alumno1 in this._alumnos)
+            {
+                if (alumno1.Equals(alumno))
+                    throw new AlumnoExistenteException("\nYa existe el alumno que desea ingresar.");
+            }
+
+            this._alumnos.Add(alumno);
         }
         public void AgregarEmpleado(Empleado empleado)
         {
             throw new NotImplementedException();
         }
-        public void EliminarAlumno(int i)
+        public void EliminarAlumno(int codigo)
         {
-            throw new NotImplementedException();
+            Alumno alumno = this._alumnos.SingleOrDefault(x => x.Codigo == codigo);
+
+            if(alumno != null)
+            {
+                this._alumnos.Remove(alumno);
+            }
+            else
+            {
+                Console.WriteLine("No se ha encontrado el alumno que desea eliminar.");
+            }
         }
         public void EliminarEmpleado(int i)
         {
@@ -68,7 +89,9 @@ namespace Solucion.LibreriaNegocio
         }
         public List<Alumno> TraerAlumnos()
         {
-            throw new NotImplementedException();
+
+            return _alumnos;
+
         }
         public Empleado TraerEmpleadoPorLegajo(int i)
         {

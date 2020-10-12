@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Solucion.LibreriaNegocio
 {
-    public class Docente : Persona
+    public class Docente : Empleado
     {
         //ATRIBUTOS
         //CONSTRUCTORES
@@ -16,13 +16,8 @@ namespace Solucion.LibreriaNegocio
         //MÉTODOS
         public override string GetNombreCompleto()
         {
-            return base.GetNombreCompleto();
+            return "Docente " + this._apellido.ToUpper();
         }
-        public override string GetCredencial()
-        {
-            throw new NotImplementedException();
-        }
-
-
+        
     }
 }

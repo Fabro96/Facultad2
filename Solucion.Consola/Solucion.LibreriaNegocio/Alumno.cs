@@ -20,6 +20,10 @@ namespace Solucion.LibreriaNegocio
         {
             this._codigo = codigo;
         }
+        public Alumno(int codigo)
+        {
+            this._codigo = codigo;
+        }
 
         //PROPIEDADES
         public int Codigo
@@ -35,11 +39,23 @@ namespace Solucion.LibreriaNegocio
         //MÉTODOS
         public override string GetCredencial()
         {
-            throw new NotImplementedException();
+            return string.Format("Código {0} - {1}, {2}", this._codigo, this._apellido.ToUpper(), this._nombre.ToUpper()); ;
         }
         public override string ToString()
         {
-            return base.ToString();
+            return GetCredencial();
+        }
+        public override bool Equals(object obj)
+        {
+            if (obj == null)
+                return false;
+
+            if (!(obj is Alumno))
+                return false;
+
+            Alumno alumno1 = (Alumno)obj;
+
+            return (this._codigo == alumno1.Codigo);
         }
 
 

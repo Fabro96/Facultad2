@@ -22,7 +22,7 @@ namespace Solucion.Consola
 
             do
             {
-                
+                Console.Clear();
                 Console.WriteLine("MENÚ DE USUARIO\n");
                 Console.WriteLine("1 - AGREGAR ALUMNO\n" +
                                   "2 - AGREGAR EMPLEADO\n" +
@@ -84,15 +84,31 @@ namespace Solucion.Consola
         {
             try
             {
+                Console.WriteLine("AGREGAR ALUMNO\n");
+                string nombre = ConsolaHelper.PedirNombre();
+                string apellido = ConsolaHelper.PedirApellido();
+                int codigo = ConsolaHelper.PedirCodigo(0, 999999);
+                DateTime nacimiento = ConsolaHelper.PedirFecha("nacimiento");
 
+                FCE.AgregarAlumno(codigo, nombre, apellido, nacimiento);
+
+                Console.WriteLine("\nAlumno agregado existosamente.");
             }
-            catch (Exception ex)
+            catch (AlumnoExistenteException ex)
             {
-                Console.WriteLine("\nLo sentimos hubo un error en el sistema. " + ex.Message + "Intentelo nuevamente.");
+                Console.WriteLine(ex.Message);
                 Console.WriteLine("\nIngrese una tecla para continuar.");
                 Console.ReadKey();
                 Console.Clear();
             }
+            catch (Exception ex)
+            {
+                Console.WriteLine("\nLo sentimos hubo un error en el sistema. " + ex.Message + " Intentelo nuevamente.");
+                Console.WriteLine("\nIngrese una tecla para continuar.");
+                Console.ReadKey();
+                Console.Clear();
+            }
+            Console.ReadKey();
         }
         public static void AgregarEmpleado(Facultad FCE)
         {
@@ -112,7 +128,24 @@ namespace Solucion.Consola
         {
             try
             {
-
+                if(FCE.TieneAlumnos is true)
+                {
+                    Console.WriteLine("ELIMINAR ALUMNO\n");
+                    Program.ListarAlumnos(FCE);
+                    
+                    int codigo = ConsolaHelper.PedirCodigo(0, 999999);
+                    FCE.EliminarAlumno(codigo);
+                    Console.WriteLine("\nAlumno eliminado correctamente.");
+                    Console.WriteLine("\nIngrese una tecla para continuar.");
+                    Console.ReadKey();
+                }
+                else
+                {
+                    Console.WriteLine("No hay alumnos cargados en el sistema.");
+                    Console.WriteLine("\nIngrese una tecla para continuar.");
+                    Console.ReadKey();
+                    Console.Clear();
+                }
             }
             catch (Exception ex)
             {
@@ -121,6 +154,7 @@ namespace Solucion.Consola
                 Console.ReadKey();
                 Console.Clear();
             }
+            
         }
         public static void EliminarEmpleado(Facultad FCE)
         {
@@ -155,7 +189,23 @@ namespace Solucion.Consola
         {
             try
             {
+                Console.WriteLine("LISTADO ALUMNOS\n");
 
+                if(FCE.TieneAlumnos is true)
+                {
+                    foreach(Alumno alumno in FCE.Alumnos)
+                    {
+                        Console.WriteLine(alumno.ToString());
+                    }
+                    Console.ReadKey();
+                }
+                else
+                {
+                    Console.WriteLine("No hay alumnos cargados en el sistema.");
+                    Console.WriteLine("\nIngrese una tecla para continuar.");
+                    Console.ReadKey();
+                    Console.Clear();
+                }
             }
             catch (Exception ex)
             {
@@ -164,6 +214,7 @@ namespace Solucion.Consola
                 Console.ReadKey();
                 Console.Clear();
             }
+            
         }
         public static void ListarEmpleados(Facultad FCE)
         {

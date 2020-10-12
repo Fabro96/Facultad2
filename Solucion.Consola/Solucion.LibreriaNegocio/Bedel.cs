@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Solucion.LibreriaNegocio
 {
-    public class Bedel : Persona
+    public class Bedel : Empleado
     {
         //ATRIBUTOS
         private string _apodo;
@@ -24,11 +24,8 @@ namespace Solucion.LibreriaNegocio
         //MÉTODOS
         public override string GetNombreCompleto()
         {
-            return base.GetNombreCompleto();
+            return "Bedel " + this._apodo.ToUpper() ;
         }
-        public override string GetCredencial()
-        {
-            throw new NotImplementedException();
-        }
+        
     }
 }
