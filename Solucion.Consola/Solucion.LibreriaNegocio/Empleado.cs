@@ -46,7 +46,7 @@ namespace Solucion.LibreriaNegocio
         }
         public Salario UltimoSalario
         {
-            get { return _salarios.FindLast; }
+            get { return _salarios.Last(); }
         }
 
         //MÉTODOS

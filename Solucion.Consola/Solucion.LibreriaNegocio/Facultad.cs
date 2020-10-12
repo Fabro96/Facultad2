@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Solucion.LibreriaNegocio
 {
-    class Facultad
+    public class Facultad
     {
         //ATRIBUTOS
         private string _nombre;
@@ -19,7 +19,10 @@ namespace Solucion.LibreriaNegocio
         public Facultad() { }
         public Facultad(string nombre, int cantidadeSedes)
         {
-
+            this._nombre = nombre;
+            this._cantidadadSedes = cantidadeSedes;
+            this._empleados = new List<Empleado>();
+            this._alumnos = new List<Alumno>();
         }
 
         //PROPIEDADES
