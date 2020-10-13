@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Runtime.CompilerServices;
 
 namespace Solucion.Consola
 {
@@ -114,7 +115,25 @@ namespace Solucion.Consola
         {
             try
             {
+                Console.WriteLine("\nAGREGAR EMPLEADO\n");
+                int legajo = ConsolaHelper.PedirLegajo(0, 99999);
+                string nombre = ConsolaHelper.PedirNombreEmpleado();
+                string apellido = ConsolaHelper.PedirApellidoEmpleado();
+                int tipoEmpleado = ConsolaHelper.TipoEmpleado(1, 3);
 
+                string apodo = string.Empty;
+
+                if(tipoEmpleado == 1)
+                {
+                    apodo = ConsolaHelper.PedirApodo();
+                }
+
+
+                FCE.AgregarEmpleado(legajo, apellido, nombre, tipoEmpleado, apodo);
+                Console.WriteLine("\nEl empleado a sido agregado correctamente.");
+                Console.WriteLine("\nIngrese una tecla para continuar.");
+                Console.ReadKey();
+                Console.Clear();
             }
             catch (Exception ex)
             {
@@ -131,8 +150,7 @@ namespace Solucion.Consola
                 if(FCE.TieneAlumnos is true)
                 {
                     Console.WriteLine("ELIMINAR ALUMNO\n");
-                    Program.ListarAlumnos(FCE);
-                    
+                    Program.ListarAlumnos(FCE);                   
                     int codigo = ConsolaHelper.PedirCodigo(0, 999999);
                     FCE.EliminarAlumno(codigo);
                     Console.WriteLine("\nAlumno eliminado correctamente.");
@@ -174,6 +192,15 @@ namespace Solucion.Consola
         {
             try
             {
+                Console.WriteLine("MODIFICAR EMPLEADOS\n");
+                ListarEmpleados(FCE);
+                int legajo = ConsolaHelper.PedirLegajo(0, 999999);
+                string apellido = ConsolaHelper.PedirApellidoEmpleado();
+                FCE.ModificarEmpleado(legajo, apellido);
+                Console.WriteLine("\nEmpleado modificado correctamente.");
+                Console.WriteLine("\nIngrese una tecla para continuar.");
+                Console.ReadKey();
+                Console.Clear();
 
             }
             catch (Exception ex)
@@ -220,7 +247,25 @@ namespace Solucion.Consola
         {
             try
             {
-
+                Console.WriteLine("LISTADO EMPLEADOS\n");
+                if(FCE.TieneEmpleados is true)
+                {
+                    foreach(Empleado empleado in FCE.Empleados)
+                    {
+                        Console.WriteLine(empleado.ToString());
+                    }
+                    Console.WriteLine("\nIngrese una tecla para continuar.");
+                    Console.ReadKey();
+                    Console.Clear();
+                }
+                else
+                {
+                    Console.WriteLine("No hay alumnos cargados en el sistema.");
+                    Console.WriteLine("\nIngrese una tecla para continuar.");
+                    Console.ReadKey();
+                    Console.Clear();
+                }
+                
             }
             catch (Exception ex)
             {

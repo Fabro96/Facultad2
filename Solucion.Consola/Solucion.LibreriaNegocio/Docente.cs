@@ -11,6 +11,12 @@ namespace Solucion.LibreriaNegocio
         //ATRIBUTOS
         //CONSTRUCTORES
         public Docente() { }
+        public Docente(int legajo, string apellido, string nombre)
+        {
+            this._legajo = legajo;
+            this._apellido = apellido;
+            this._nombre = nombre;
+        }
 
         //PROPIEDADES
         //MÉTODOS

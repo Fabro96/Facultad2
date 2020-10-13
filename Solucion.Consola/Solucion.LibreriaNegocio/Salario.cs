@@ -17,9 +17,13 @@ namespace Solucion.LibreriaNegocio
 
         //CONSTRUCTORES
         public Salario() { }
-        public Salario(double bruto)
+        public Salario(DateTime fecha, string codigoTransferencia, double bruto)
         {
-
+            this._fecha = fecha;
+            this._codigoTransferencia = codigoTransferencia;
+            this._bruto = bruto;
+            this._descuento = bruto * 0.17;
+            this.GetSalarioNeto();
         }
 
         //PROPIEDADES
@@ -47,7 +51,7 @@ namespace Solucion.LibreriaNegocio
         //MÉTODOS
         public double GetSalarioNeto()
         {
-            throw new NotImplementedException();
+            return _bruto - _descuento;
         }
 
 

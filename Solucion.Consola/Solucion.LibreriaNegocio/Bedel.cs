@@ -13,6 +13,13 @@ namespace Solucion.LibreriaNegocio
 
         //CONSTRUCTORES
         public Bedel() { }
+        public Bedel(int legajo, string apellido, string nombre, string apodo)
+        {
+            this._legajo = legajo;
+            this._apellido = apellido;
+            this._nombre = nombre;
+            this._apodo = apodo;
+        }
 
         //PROPIEDADES
         public string Apodo

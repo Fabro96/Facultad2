@@ -48,6 +48,10 @@ namespace Solucion.LibreriaNegocio
         {
             get { return _alumnos.Count > 0; }
         }
+        public bool TieneEmpleados
+        {
+            get { return _empleados.Count > 0; }
+        }
 
         //MÉTODOS
         public void AgregarAlumno(int codigo, string nombre, string apellido, DateTime nacimiento)
@@ -62,9 +66,25 @@ namespace Solucion.LibreriaNegocio
 
             this._alumnos.Add(alumno);
         }
-        public void AgregarEmpleado(Empleado empleado)
+        public void AgregarEmpleado(int legajo, string apellido, string nombre, int TipoEmpleado, string apodo)
         {
-            throw new NotImplementedException();
+            Empleado empleado;
+
+            switch (TipoEmpleado)
+            {
+                case 1:
+                    empleado = new Bedel(legajo, apellido, nombre, apodo);
+                    break;
+                case 2:
+                    empleado = new Docente(legajo, apellido, nombre);
+                    break;
+                case 3:
+                    empleado = new Directivo(legajo, apellido, nombre);
+                    break;
+                default:
+                    throw new Exception("\nTipo de Empleado inválido");
+            }
+            this._empleados.Add(empleado);
         }
         public void EliminarAlumno(int codigo)
         {
@@ -83,9 +103,22 @@ namespace Solucion.LibreriaNegocio
         {
             throw new NotImplementedException();
         }
-        public void ModificarEmpleado(Empleado empleado)
+        public void ModificarEmpleado(int legajo, string apellido)
         {
-            throw new NotImplementedException();
+            Empleado empleado = this._empleados.SingleOrDefault(x => x.Legajo == legajo);
+
+            foreach(Empleado empleado1 in this._empleados)
+            {
+                if(empleado1 != null)
+                {
+                    empleado1.Apellido = apellido;
+                }
+                else
+                {
+                    throw new Exception("No existe el empleado que está buscando.");
+                }
+                
+            }
         }
         public List<Alumno> TraerAlumnos()
         {

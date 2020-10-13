@@ -10,14 +10,18 @@ namespace Solucion.LibreriaNegocio
     {
         //ATRIBUTOS
         private DateTime _fechaIngreso;
-        private int _legajo;
+        protected int _legajo;
         private List<Salario> _salarios;
 
         //CONSTRUCTORES
         public Empleado() { }
         public Empleado(int legajo, string apellido, string nombre, DateTime ingreso)
         {
-
+            this._legajo = legajo;
+            this._apellido = apellido;
+            this._nombre = nombre;
+            this._fechaIngreso = ingreso;
+            this._salarios = new List<Salario>();
         }
 
         //PROPIEDADES
@@ -52,11 +56,19 @@ namespace Solucion.LibreriaNegocio
         //MÉTODOS
         public override bool Equals(object obj)
         {
-            return base.Equals(obj);
+            
+            if (obj == null)
+                return false;
+
+            if (!(obj is Empleado))
+                return false;
+
+            return (this.Legajo == ((Empleado)obj).Legajo);
+
         }
         public override string GetCredencial()
         {
-            return string.Format("{0} - {1} Salario $ {2}", this._legajo, this.GetNombreCompleto(), this.UltimoSalario);
+            return string.Format("{0} - {1}", this._legajo, this.GetNombreCompleto());
         }
         public override string GetNombreCompleto()
         {

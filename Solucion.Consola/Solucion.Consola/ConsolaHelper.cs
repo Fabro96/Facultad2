@@ -74,5 +74,78 @@ namespace Solucion.Consola
 
             return f;
         }
+        public static int TipoEmpleado(int min, int max)
+        {
+            int res;
+            Console.WriteLine("\nIngrese el tipo de Empleado: \n" +
+                                "1 - Bebel\n" +
+                                "2 - Docente\n" +
+                                "3 - Directivo\n");
+            do
+            {
+                if (!int.TryParse(Console.ReadLine(), out res))
+                {
+                    Console.WriteLine("\nIntentolo nuevamente por favor. Recuerde que debe ser un número entero.");
+                    res = -1;
+                }
+            } while (res < min || res > max);
+            return res;
+        }
+        public static int PedirLegajo(int min, int max)
+        {
+            int res;
+            Console.WriteLine("\nIngrese el legajo del Empleado: ");
+            do
+            {
+                if (!int.TryParse(Console.ReadLine(), out res))
+                {
+                    Console.WriteLine("\nIntentolo nuevamente por favor. Recuerde que debe ser un número entero.");
+                    res = -1;
+                }
+            } while (res < min || res > max);
+            return res;
+        }
+        public static string PedirNombreEmpleado()
+        {
+            string s;
+            Console.WriteLine("\nIngrese el nombre del empleado: ");
+            Regex expresion = new Regex("^[a-zA-Z]+$");
+            s = Console.ReadLine();
+            while (!expresion.IsMatch(s))
+            {
+                Console.WriteLine("\nIntentelo nuevamente por favor.");
+                s = Console.ReadLine();
+            }
+
+            return s.ToUpper();
+        }
+        public static string PedirApellidoEmpleado()
+        {
+            string s;
+            Console.WriteLine("\nIngrese el apellido del empleado: ");
+            Regex expresion = new Regex("^[a-zA-Z]+$");
+            s = Console.ReadLine();
+            while (!expresion.IsMatch(s))
+            {
+                Console.WriteLine("\nIntentelo nuevamente por favor.");
+                s = Console.ReadLine();
+            }
+
+            return s.ToUpper();
+        }
+        public static string PedirApodo()
+        {
+            string s;
+            Console.WriteLine("\nIngrese el apodo del empleado: ");
+            Regex expresion = new Regex("^[a-zA-Z]+$");
+            s = Console.ReadLine();
+            while (!expresion.IsMatch(s))
+            {
+                Console.WriteLine("\nIntentelo nuevamente por favor.");
+                s = Console.ReadLine();
+            }
+
+            return s.ToUpper();
+        }
     }
 }
