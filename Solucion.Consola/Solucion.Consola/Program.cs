@@ -178,7 +178,17 @@ namespace Solucion.Consola
         {
             try
             {
-
+                if(FCE.TieneEmpleados is true)
+                {
+                    Console.WriteLine("ELIMNAR EMPLEADO\n");
+                    ListarEmpleados(FCE);
+                    int legajo = ConsolaHelper.PedirLegajo(0, 999999);
+                    FCE.EliminarEmpleado(legajo);
+                    Console.WriteLine("\nEmpleado eliminado correctamente.");
+                    Console.WriteLine("\nIngrese una tecla para continuar.");
+                    Console.ReadKey();
+                    Console.Clear();
+                }
             }
             catch (Exception ex)
             {
@@ -260,7 +270,7 @@ namespace Solucion.Consola
                 }
                 else
                 {
-                    Console.WriteLine("No hay alumnos cargados en el sistema.");
+                    Console.WriteLine("No hay empleados cargados en el sistema.");
                     Console.WriteLine("\nIngrese una tecla para continuar.");
                     Console.ReadKey();
                     Console.Clear();

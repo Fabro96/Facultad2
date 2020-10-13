@@ -99,9 +99,18 @@ namespace Solucion.LibreriaNegocio
                 Console.WriteLine("No se ha encontrado el alumno que desea eliminar.");
             }
         }
-        public void EliminarEmpleado(int i)
+        public void EliminarEmpleado(int legajo)
         {
-            throw new NotImplementedException();
+            Empleado empleado = this._empleados.SingleOrDefault(x => x.Legajo == legajo);
+
+            if(empleado != null)
+            {
+                this._empleados.Remove(empleado);
+            }
+            else
+            {
+                throw new Exception("No se ha encontrado el Empleado que está buscando.");
+            }
         }
         public void ModificarEmpleado(int legajo, string apellido)
         {
