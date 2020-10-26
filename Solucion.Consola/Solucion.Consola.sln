@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Solucion.Consola", "Solucio
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Solucion.LibreriaNegocio", "Solucion.LibreriaNegocio\Solucion.LibreriaNegocio.csproj", "{255C85CB-4D4A-4851-B3B4-9E1C9E69D8DB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Solucion.Formulario", "Solucion.Formulario\Solucion.Formulario.csproj", "{95D6FB99-99F6-4242-9A7A-B3F4EE3FFB84}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{255C85CB-4D4A-4851-B3B4-9E1C9E69D8DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{255C85CB-4D4A-4851-B3B4-9E1C9E69D8DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{255C85CB-4D4A-4851-B3B4-9E1C9E69D8DB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{95D6FB99-99F6-4242-9A7A-B3F4EE3FFB84}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{95D6FB99-99F6-4242-9A7A-B3F4EE3FFB84}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{95D6FB99-99F6-4242-9A7A-B3F4EE3FFB84}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{95D6FB99-99F6-4242-9A7A-B3F4EE3FFB84}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
