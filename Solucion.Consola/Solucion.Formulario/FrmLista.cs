@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Solucion.LibreriaNegocio;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,8 +13,14 @@ namespace Solucion.Formulario
 {
     public partial class FrmLista : Form
     {
-        public FrmLista()
+        private string _nombre;
+        private Facultad _facultad;
+
+        public FrmLista(string nombre, Facultad facultad)
         {
+            this._nombre = nombre;
+            this._facultad = facultad;
+
             InitializeComponent();
         }
 

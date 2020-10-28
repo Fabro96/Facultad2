@@ -18,7 +18,7 @@ namespace Solucion.Formulario
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(
-                new FmrFacultad(
+                new FrmFacultad(
                     new Facultad("UBA - FCE", 3)));
         }
     }

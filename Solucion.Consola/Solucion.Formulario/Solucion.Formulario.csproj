@@ -46,17 +46,47 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FmrFacultad.cs">
+    <Compile Include="FrmFacultad.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FmrFacultad.Designer.cs">
-      <DependentUpon>FmrFacultad.cs</DependentUpon>
+    <Compile Include="FrmFacultad.Designer.cs">
+      <DependentUpon>FrmFacultad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmEliminar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmEliminar.Designer.cs">
+      <DependentUpon>FrmEliminar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmABMEmpleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmABMEmpleado.Designer.cs">
+      <DependentUpon>FrmABMEmpleado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmAgregarAlumno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAgregarAlumno.Designer.cs">
+      <DependentUpon>FrmAgregarAlumno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmAgregarEmpleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAgregarEmpleado.Designer.cs">
+      <DependentUpon>FrmAgregarEmpleado.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmLista.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmLista.Designer.cs">
       <DependentUpon>FrmLista.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmSalario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmSalario.Designer.cs">
+      <DependentUpon>FrmSalario.cs</DependentUpon>
     </Compile>
     <Compile Include="MDIPrincipal.cs">
       <SubType>Form</SubType>
@@ -66,11 +96,26 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="FmrFacultad.resx">
-      <DependentUpon>FmrFacultad.cs</DependentUpon>
+    <EmbeddedResource Include="FrmFacultad.resx">
+      <DependentUpon>FrmFacultad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmABMEmpleado.resx">
+      <DependentUpon>FrmABMEmpleado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmAgregarAlumno.resx">
+      <DependentUpon>FrmAgregarAlumno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmAgregarEmpleado.resx">
+      <DependentUpon>FrmAgregarEmpleado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmEliminar.resx">
+      <DependentUpon>FrmEliminar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmLista.resx">
       <DependentUpon>FrmLista.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmSalario.resx">
+      <DependentUpon>FrmSalario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MDIPrincipal.resx">
       <DependentUpon>MDIPrincipal.cs</DependentUpon>
