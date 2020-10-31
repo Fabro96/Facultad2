@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Solucion.LibreriaNegocio;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,16 @@ namespace Solucion.Formulario
 {
     public partial class FrmABMEmpleado : Form
     {
-        public FrmABMEmpleado()
+        private Facultad _facultad;
+
+        public FrmABMEmpleado(Facultad facultad, Form formPropietario)
         {
+
+            this._facultad = facultad;
+            this.Owner = formPropietario;
+            this.Owner.Hide();
             InitializeComponent();
+
         }
 
         private void FrmABMEmpleado_Load(object sender, EventArgs e)

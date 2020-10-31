@@ -74,7 +74,8 @@ namespace Solucion.Formulario
 
         private void button8_Click(object sender, EventArgs e)
         {
-
+            FrmABMEmpleado ABMempleado = new FrmABMEmpleado(this._facultad, this);
+            ABMempleado.Show();
         }
     }
 }

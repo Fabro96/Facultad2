@@ -1,5 +1,4 @@
 C:\Users\Fabrizio\OneDrive\Documentos\Facultad\2020\2C 2020\CAI\Práctica - CAI\Facultad2\Solucion.Consola\Solucion.Formulario\obj\Debug\Solucion.Formulario.csprojAssemblyReference.cache
-C:\Users\Fabrizio\OneDrive\Documentos\Facultad\2020\2C 2020\CAI\Práctica - CAI\Facultad2\Solucion.Consola\Solucion.Formulario\obj\Debug\Solucion.Formulario.FmrFacultad.resources
 C:\Users\Fabrizio\OneDrive\Documentos\Facultad\2020\2C 2020\CAI\Práctica - CAI\Facultad2\Solucion.Consola\Solucion.Formulario\obj\Debug\Solucion.Formulario.MDIPrincipal.resources
 C:\Users\Fabrizio\OneDrive\Documentos\Facultad\2020\2C 2020\CAI\Práctica - CAI\Facultad2\Solucion.Consola\Solucion.Formulario\obj\Debug\Solucion.Formulario.Properties.Resources.resources
 C:\Users\Fabrizio\OneDrive\Documentos\Facultad\2020\2C 2020\CAI\Práctica - CAI\Facultad2\Solucion.Consola\Solucion.Formulario\obj\Debug\Solucion.Formulario.csproj.GenerateResource.cache
@@ -13,3 +12,9 @@ C:\Users\Fabrizio\OneDrive\Documentos\Facultad\2020\2C 2020\CAI\Práctica - CAI\
 C:\Users\Fabrizio\OneDrive\Documentos\Facultad\2020\2C 2020\CAI\Práctica - CAI\Facultad2\Solucion.Consola\Solucion.Formulario\obj\Debug\Solucion.Formulario.exe
 C:\Users\Fabrizio\OneDrive\Documentos\Facultad\2020\2C 2020\CAI\Práctica - CAI\Facultad2\Solucion.Consola\Solucion.Formulario\obj\Debug\Solucion.Formulario.pdb
 C:\Users\Fabrizio\OneDrive\Documentos\Facultad\2020\2C 2020\CAI\Práctica - CAI\Facultad2\Solucion.Consola\Solucion.Formulario\obj\Debug\Solucion.Formulario.FrmLista.resources
+C:\Users\Fabrizio\OneDrive\Documentos\Facultad\2020\2C 2020\CAI\Práctica - CAI\Facultad2\Solucion.Consola\Solucion.Formulario\obj\Debug\Solucion.Formulario.FrmFacultad.resources
+C:\Users\Fabrizio\OneDrive\Documentos\Facultad\2020\2C 2020\CAI\Práctica - CAI\Facultad2\Solucion.Consola\Solucion.Formulario\obj\Debug\Solucion.Formulario.FrmABMEmpleado.resources
+C:\Users\Fabrizio\OneDrive\Documentos\Facultad\2020\2C 2020\CAI\Práctica - CAI\Facultad2\Solucion.Consola\Solucion.Formulario\obj\Debug\Solucion.Formulario.FrmAgregarAlumno.resources
+C:\Users\Fabrizio\OneDrive\Documentos\Facultad\2020\2C 2020\CAI\Práctica - CAI\Facultad2\Solucion.Consola\Solucion.Formulario\obj\Debug\Solucion.Formulario.FrmAgregarEmpleado.resources
+C:\Users\Fabrizio\OneDrive\Documentos\Facultad\2020\2C 2020\CAI\Práctica - CAI\Facultad2\Solucion.Consola\Solucion.Formulario\obj\Debug\Solucion.Formulario.FrmEliminar.resources
+C:\Users\Fabrizio\OneDrive\Documentos\Facultad\2020\2C 2020\CAI\Práctica - CAI\Facultad2\Solucion.Consola\Solucion.Formulario\obj\Debug\Solucion.Formulario.FrmSalario.resources
